@@ -1,0 +1,92 @@
+/* popup.css */
+
+/* Style untuk header dan navigasi */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff6f61;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #333;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Style untuk banner */
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style untuk produk */
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 2px 5px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Style untuk popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.popup-box img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.popup-box .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
