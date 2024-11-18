@@ -1,0 +1,289 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Index Page Styles */
+body.index {
+    background-color: #2C2C54;
+}
+
+.container {
+    background-color: #D8C3C3;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    color: #FF6F61;
+    font-size: 2em;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FF3B2F;
+}
+
+main {
+    margin-top: 20px;
+}
+
+h2 {
+    color: white;
+    font-size: 2.5em;
+}
+
+p {
+    color: white;
+    font-size: 1.2em;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-container p {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Login Page Styles */
+body.login {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.logo {
+    color: #FF6600;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+a {
+    color: #FF6600;
+    text-decoration: none;
+    font-size: 0.9em;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #FF6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e65c00;
+}
+
+.signup {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.signup a {
+    color: #FF6600;
+}
+
+/* Registration Page Styles */
+body.registration {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-container {
+    background-color: #D8C3C3;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+a {
+    color: #FF6600;
+    text-decoration: none;
+    font-size: 0.9em;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.signup {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.signup a {
+    color: #FF6600;
+}
+
+/* Dashboard Page Styles */
+body.dashboard {
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ff6f61;
+    padding: 10px 0;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product {
+    background-color: rgb(147, 58, 58);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product .tags {
+    margin-top: 10px;
+}
+
+.product .tags span {
+    background-color: #ff6f61;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin: 2px;
+}

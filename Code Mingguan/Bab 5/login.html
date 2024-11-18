@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiMart Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="logo">DigiMart</h1>
+        <p>Welcome back !!!</p>
+        <h2>Sign in</h2>
+        <form action="#" method="POST" id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <a href="#">Forgot Password?</a>
+            <button type="submit" class="btn">SIGN IN ➔</button>
+        </form>
+        <p class="signup">I don't have an account ? <a href="regis.html">Sign up</a></p>
+    </div>
+    
+    <!-- Toast/Snackbar element -->
+    <div id="toast"></div>
+
+    <script>
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            
+            // Here you would typically send the login data to a server
+            // For this example, we'll just show a success message
+            showToast("Logging in with email: " + email);
+            
+            // Redirect to dashboard after a short delay (simulating server response)
+            setTimeout(function() {
+                window.location.href = "";
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

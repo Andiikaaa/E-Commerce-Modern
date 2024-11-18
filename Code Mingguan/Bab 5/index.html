@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiMart</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">DigiMart</h1>
+            <nav>
+                <a href="login.html"><button class="btn">SIGN IN</button></a>
+                <a href="regis.html"><button class="btn">SIGN UP</button></a>
+            </nav>
+        </header>
+        <main>
+            <h2 id="welcome-message">Selamat Datang Di DigiMart</h2>
+            <p>Tempat belanja online terpercaya Anda</p>
+            <p id="product-count">Temukan ribuan produk berkualitas hanya di Digimart. Selamat berbelanja!</p>
+            <div class="image-container">
+                <img src="2.png" alt="Gambar Produk" id="product-image">
+            </div>
+            <button id="change-image">Ganti Gambar</button>
+            <div id="featured-products">
+                <h3>Produk Unggulan</h3>
+                <ul id="product-list"></ul>
+            </div>
+            <button id="add-product">Tambah Produk</button>
+        </main>
+    </div>
+
+    <script>
+        // Fungsi untuk mengubah pesan selamat datang
+        function changeWelcomeMessage() {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const currentHour = new Date().getHours();
+            let greeting;
+
+            if (currentHour < 12) {
+                greeting = "Selamat Pagi";
+            } else if (currentHour < 18) {
+                greeting = "Selamat Siang";
+            } else {
+                greeting = "Selamat Malam";
+            }
+
+            welcomeMessage.textContent = `${greeting} dan Selamat Datang Di DigiMart`;
+        }
+
+        // Fungsi untuk mengganti gambar produk
+        function changeProductImage() {
+            const productImage = document.getElementById('product-image');
+            const images = ['2.png', '1.jpg', '3.jpg']; // Asumsikan Anda memiliki beberapa gambar
+            let currentIndex = images.indexOf(productImage.src.split('/').pop());
+            let nextIndex = (currentIndex + 1) % images.length;
+            productImage.src = images[nextIndex];
+        }
+
+        // Fungsi untuk menambah produk
+        function addProduct() {
+            const productList = document.getElementById('product-list');
+            const productNames = ['Laptop', 'Smartphone', 'Headphone', 'Kamera', 'Tablet'];
+            const randomProduct = productNames[Math.floor(Math.random() * productNames.length)];
+            const listItem = document.createElement('li');
+            listItem.textContent = randomProduct;
+            productList.appendChild(listItem);
+
+            updateProductCount();
+        }
+
+        // Fungsi untuk memperbarui jumlah produk
+        function updateProductCount() {
+            const productCount = document.getElementById('product-count');
+            const count = document.getElementById('product-list').children.length;
+            productCount.textContent = `Saat ini tersedia ${count} produk unggulan di DigiMart. Selamat berbelanja!`;
+        }
+
+        // Event listeners
+        document.getElementById('change-image').addEventListener('click', changeProductImage);
+        document.getElementById('add-product').addEventListener('click', addProduct);
+
+        // Inisialisasi
+        changeWelcomeMessage();
+        updateProductCount();
+
+        // Mengubah pesan selamat datang setiap 1 jam
+        setInterval(changeWelcomeMessage, 3600000);
+    </script>
+</body>
+</html>
